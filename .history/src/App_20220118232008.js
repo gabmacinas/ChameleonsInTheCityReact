@@ -1,4 +1,4 @@
-import logo from './Showcase.gif';
+import logo from './showcase.gif';
 import './App.css';
 import './Button.scss';
 import './Title.scss';

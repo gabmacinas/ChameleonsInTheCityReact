@@ -1,4 +1,4 @@
-import logo from './Showcase.gif';
+import logo from './ch_icon.png';
 import './App.css';
 import './Button.scss';
 import './Title.scss';

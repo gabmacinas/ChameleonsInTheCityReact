@@ -6,13 +6,13 @@
 
 :root {
   --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1);
+  --card-width: calc(var(--card-height) / 1.5);
 }
 
 
 body {
   min-height: 100vh;
-  background: #1f1f1f;
+  background: #212534;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -23,7 +23,7 @@ body {
 
 
 .card {
-  background: #1f1f1f;
+  background: #191c29;
   width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
@@ -37,14 +37,6 @@ body {
   color: rgb(88 199 250 / 0%);
   cursor: pointer;
   font-family: cursive;
-}
-
-.card-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: var(--card-width);
-  height: var(--card-height);
 }
 
 .card:hover {
@@ -101,11 +93,10 @@ body {
   }
 }
 
-h1 {
-  font-family: 300 1em 'Fira Sans', sans-serif;
-  font-size: 2.5em;
-  color: #eee;
-  text-align: center;
-  margin-bottom: 2rem;
-
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
 }

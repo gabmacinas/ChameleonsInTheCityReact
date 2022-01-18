@@ -1,12 +1,16 @@
-import logo from './Showcase.gif';
-import './App.css';
+import logo from './ch_icon.png';
+// import './App.css';
 import './Button.scss';
 import './Title.scss';
 
 function App() {
   return (
     <>
-      <h1>Chameleons In The City</h1>
+      <p>
+        Spice up your type with CSS
+        <span>Animated text fill</span>
+        &mdash; no JavaScript required &mdash;
+      </p>
       <div className='card'>
         <img src={logo} alt='logo' className='card-img' />
       </div>{' '}
