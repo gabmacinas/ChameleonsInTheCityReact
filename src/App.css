@@ -1,110 +1,125 @@
-@property --rotate {
-  syntax: "<angle>";
-  initial-value: 132deg;
-  inherits: false;
+@font-face {
+    font-family: 'Power Breakfast DEMO';
+    src: url('./CITC.otf') format('opentype');
 }
 
-:root {
-  --card-height: 65vh;
-  --card-width: calc(var(--card-height) / 1);
+html, body {
+  height:100%;
+  font-family: 'Power Breakfast DEMO';
+  font-size: 25px;
 }
 
-
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  /* padding-top: 2rem; */
-  /* padding-bottom: 2rem; */
-  box-sizing: border-box;
+html {
+  background: url('./bg-min.png') fixed;
+  background-size: 100%;
 }
 
+div {
+  overflow: hidden;
+}
 
-.card {
-  background: #1f1f1f;
-  width: var(--card-width);
-  height: var(--card-height);
-  padding: 3px;
-  position: relative;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
+a {
+  color: #010105;
+  text-decoration: none;
+  transition: 500ms;
+  font-family: 'Power Breakfast DEMO';
+  font-size: 1.25em;
+}
+a:hover {
+  color: #26a1ff;
+}
+
+p {
+  padding: 0 5%;
+  font-family: 'Power Breakfast DEMO';
   font-size: 1.5em;
-  color: rgb(88 199 250 / 0%);
-  cursor: pointer;
-  font-family: cursive;
 }
 
-.card-img {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: var(--card-width);
-  height: var(--card-height);
+img {
+  box-shadow: 0px 0px 4px #000;
 }
 
-.card:hover {
-  color: rgb(88 199 250 / 100%);
-  transition: color 1s;
-}
-.card:hover:before, .card:hover:after {
-  animation: none;
-  opacity: 0;
+img-logo {
+  border-radius: 25px;
+  background: #73AD21;
+  padding: 20px;
+  width: 50px;
 }
 
 
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
+#header {
+  background: rgba(255, 255, 255, .5);
+  padding: 1%;
+  overflow: hidden;
+  height: 55px;
 }
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    --rotate: 0deg;
-  }
-  100% {
-    --rotate: 360deg;
-  }
-}
-
 h1 {
-  font-family: 300 1em 'Fira Sans', sans-serif;
-  font-size: 2.5em;
-  color: #eee;
-  text-align: center;
-  margin-bottom: 2rem;
+  font-family: 'Power Breakfast DEMO';
+  font-size: 4em;
+}
+h2 {
+  font-family: 'Power Breakfast DEMO';
+  font-size: 2em;
+}
+#header img {
+  float: left;
+  box-shadow: none;
+}
+#header ul {
+  list-style: none;
+  float: left;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+#header ul li {
+  float: left;
+  margin-left: 10px;
+  font-size: 20px;
+}
 
+.fullscreen {
+  height: 95%;
+  position: relative;
+}
+.fullscreen .header {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  text-shadow: 0px 0px 2px #000;
+}
+
+.white {
+  background: #eeeeec;
+  padding: 0 5%;
+}
+.nobg {
+  background: none;
+  padding: 0 5%;
+  color: #fff;
+  text-shadow: 0px 0px 4px #000;
+}
+.semitrans {
+  background: rgba(255, 255, 255, .5);
+  padding: 0 5%;
+}
+.dark {
+  color: #eeeeec;
+  background: #010105;
+  padding: 0 5%;
+}
+
+.nopadding {
+  padding: 0;
+}
+
+.floatleft {
+  float: left;
+  margin: 2%;
+  /* padding-bottom: 100px; */
+}
+.floatright {
+  float: right;
+  margin: 2%;
 }
